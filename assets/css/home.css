@@ -1,0 +1,122 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+.main{
+
+    padding-top: 80px;
+  
+}
+.clmain{
+    background-color: #ddd;
+}
+.main1{
+    padding-top: 150px;
+    background-color: #ddd;
+}
+.btn
+{
+    border-radius: 30px;
+    background-color: #CF0A0A;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+:hover .btp{
+    color: #333;
+   
+}
+
+body {
+
+    background-color: #ddd;
+-webkit-box-align: center;
+      align-items: center;
+-webkit-box-pack: center;
+      justify-content: center;
+
+}
+nav{
+background-color: rgb(58, 58, 53);
+
+}
+#carouselExampleIndicators{
+    padding-top: 100px;
+}
+
+
+label {
+position: relative;
+display: inline-block;
+background-color: #fff;
+padding: 5px 12px;
+-webkit-transition: all 1s ease;
+transition: all 1s ease;
+border-radius: 0;
+box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+label::after {
+content: '';
+display: block;
+height: 2px;
+width: 80%;
+background-color: #F0AD4E;
+-webkit-transition: all 1s ease 0.5s;
+transition: all 1s ease 0.5s;
+}
+label input {
+-webkit-transition: width 1s ease, opacity 0.5s ease 0.5s;
+transition: width 1s ease, opacity 0.5s ease 0.5s;
+opacity: 1;
+width: 180px;
+height: 25px;
+border: 0;
+outline: none;
+color: #b06d0f;
+}
+label i {
+position: absolute;
+top: 11px;
+right: 11px;
+color: #333;
+cursor: pointer;
+}
+label[data-state="close"] {
+border-radius: 30px;
+padding: 5px 5px;
+-webkit-transition: all 1s ease;
+transition: all 1s ease;
+}
+label[data-state="close"]::after {
+width: 0%;
+-webkit-transition: all 0.3s ease;
+transition: all 0.3s ease;
+}
+label[data-state="close"] i {
+pointer-events: none;
+}
+label[data-state="close"] input {
+width: 28px;
+height: 25px;
+opacity: 0;
+cursor: pointer;
+-webkit-transition: opacity 0.5s ease, width 1s ease;
+transition: opacity 0.5s ease, width 1s ease;
+
+}
+
+/*
+.hvitem:hover{
+transform: translateY(-2px);
+box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.05);
+
+}
+.hvitem{
+padding-bottom: 10px;
+padding-top: 10px;
+}*/
+.anh{
+   
+    padding: 8px;
+    background: #fff;
+    border: 1px solid #ddd;
+    position: relative;
+}

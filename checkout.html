@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en" ng-app="myapp" ng-controller="products">
+
+<head>
+    <title>THANH TOÁN</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- link fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- Angular js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"
+        integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.8.3/angular-messages.min.js"
+        integrity="sha512-a+xgEyXVK7r+KKIDYyHtFfLi9LItmFDff6Z4/5lrGmL03u1vtFCjQXQz3dSIwOapB3YIRMBO1+IQj6ptnxAh/A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+         <link rel="stylesheet" href="assets/css/footer.css"> 
+
+</head>
+
+<body ng-controller="cart">
+    <header>
+        <nav class="navbar navbar-expand-lg  py-4  ">
+          <div class="container">
+          
+            <a href="#" class="navbar-brand d-flex justify-content-between align-items-center ">
+              <span class=" fw-bold fs-1 text-white ms-2">PVK</span>
+            </a>
+         
+    
+            <button class="navbar-toggler boder-0 text-white " type="button" data-bs-toggle="collapse"
+              data-bs-target="#navMenu">
+              <span class="navbar-toggler-icon bg-white "></span>
+            </button>
+    
+            <div class="collapse navbar-collapse " id="navMenu">
+              <ul class="navbar-nav mx-auto text-center">
+                <li class="nav-item px-2  py-2">
+                  <a class="nav-link active text-light  fs-5" aria-current="page" href="/index.html">Home</a>
+                </li>
+                <li class="nav-item px-2  py-2 ">
+                  <a class="nav-link text-light fs-5 " href="html/manshoes.html">Giày Thể Thao Nam</a>
+                </li>
+                <li class="nav-item px-2  py-2">
+                  <a class="nav-link text-light fs-5" href="html/womenshoes.html">Giày Thể Thao Nữ</a>
+                </li>
+                <li class="nav-item px-2  py-2">
+                  <a class="nav-link text-light fs-5" href="html/Sandalnam.html">Sandal</a>
+                </li>
+                <li class="nav-item px-2  py-2 boder-0 ">
+                  <a class="nav-link text-light fs-5" href="html/Balo.html">Balo </a>
+                </li>
+                
+              </ul>
+            </div>
+           
+          </div>
+        </nav>
+       
+      </header>
+    <!-- Main  -->
+
+    <main ng-controller="checkOut">
+        <div class="container main">
+            <div class="row mt-5 mb-5">
+                <div class="col-12 col-lg-4 pe-lg-1">
+                    <h3 class="text-center mb-4">THÔNG TIN THANH TOÁN</h3>
+                    <form name="FormCheckOut" novalidate>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                name="email" ng-model="emailModel" required>
+                        </div>
+                        <!-- ERROR FOR EMAIL -->
+                        <div ng-if="FormCheckOut.$submitted || FormCheckOut.email.$dirty" class="mb-2"
+                            ng-messages="FormCheckOut.email.$error" style="color: #D10024;" role="alert">
+                            <div ng-message="required"><strong>Email không được để trống!</strong></div>
+                            <div ng-message-default><strong>Email không đúng định dạng!</strong></div>
+                        </div>
+                        <!-- ERROR FOR EMAIL -->
+
+                        <div class="mb-3">
+                            <label for="fullname" class="form-label">Họ và tên</label>
+                            <input type="text" class="form-control" id="fullname" aria-describedby="emailHelp"
+                                name="fullname" ng-model="fullnameModel" required>
+                        </div>
+                        <!-- ERROR FOR FULLNAME -->
+                        <div ng-if="FormCheckOut.$submitted || FormCheckOut.fullname.$dirty" class="mb-2"
+                            ng-messages="FormCheckOut.fullname.$error" style="color: #D10024;" role="alert">
+                            <div ng-message="required"><strong>Họ và tên không được để trống!</strong></div>
+                            <div ng-message-default><strong>Họ và tên không chính xác!</strong></div>
+                        </div>
+                        <!-- ERROR FOR FULLNAME -->
+
+                        <div class="mb-3">
+                            <label for="phoneNumber" class="form-label">Số điện thoại</label>
+                            <input type="text" class="form-control" id="phoneNumber" maxlength="10" minlength="10"
+                                name="phone" ng-model="phoneModel" pattern="\d+" required aria-describedby="emailHelp">
+                        </div>
+                        <!-- ERROR FOR PHONE NUMBER -->
+                        <div ng-if="FormCheckOut.$submitted || FormCheckOut.phone.$dirty" class="mb-2"
+                            ng-messages="FormCheckOut.phone.$error" style="color: #D10024;" role="alert">
+                            <div ng-message="required"><strong>Số điện thoại không được để trống!</strong></div>
+                            <div ng-message="pattern"><strong>Vui lòng nhập số!</strong></div>
+                            <div ng-message-default><strong>Số điện thoại không chính xác!</strong></div>
+                        </div>
+                        <!-- ERROR FOR PHONE NUMBER -->
+
+                        <div class="mb-3">
+                            <label for="province" class="form-label">Khu vực</label>
+                            <select class="form-select" aria-label="Default select example" id="province"
+                                ng-model="province" ng-init="province='HCM'">
+                                <option value="HCM">TP Hồ Chí Minh</option>
+                                <option value="HN">Hà Nội</option>
+                                <option value="GL">Gia Lai</option>
+                                <option value="LD">Lâm Đồng</option>
+                                <option value="CT">Cần Thơ</option>
+                                <option value="DN">Đà Nẵng</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Địa chỉ giao hàng</label>
+                            <textarea class="form-control" id="address" ng-model="addressModel" name="address" rows="3"
+                                required></textarea>
+                        </div>
+                        <!-- ERROR FOR ADDRESS -->
+                        <div ng-if="FormCheckOut.$submitted || FormCheckOut.address.$dirty" class="mb-2"
+                            ng-messages="FormCheckOut.address.$error" style="color: #D10024;" role="alert">
+                            <div ng-message="required"><strong>Địa chỉ không được để trống!</strong></div>
+                            <div ng-message-default><strong>Địa chỉ không chính xác!</strong></div>
+                        </div>
+                        <!-- ERROR FOR ADDRESS -->
+
+                        <div class="mb-3">
+                            <label for="ghichu" class="form-label">Ghi chú</label>
+                            <textarea class="form-control" id="ghichu" ng-model="ghichu" name="ghichu"
+                                rows="3"></textarea>
+                        </div>
+                        <div class="text-center d-none d-lg-block">
+                            <button type="submit" class="btn button-custom" ng-click="pay(this)">Thanh toán</button>
+                        </div>
+                    </form>
+                    <!-- notification -->
+                    <div class="toast-container position-fixed fixed-top top-0 end-0 p-3">
+                        <div id="liveToast" class="toast bg-dark text-light" role="alert" aria-live="assertive"
+                            aria-atomic="true">
+                            <div class="toast-header">
+                                <!-- Success -->
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfz3upZJUzgki4bn27faJf6gPIIo7Yo5HxZg&usqp=CAU"
+                                    class="rounded me-2" alt="..." height="20px" ng-show="PaySuccess">
+                                <strong class="me-auto" ng-show="PaySuccess">THÀNH CÔNG!</strong>
+
+                                <!-- Fail -->
+                                <img src="https://cdn-icons-png.flaticon.com/512/6659/6659895.png" class="rounded me-2"
+                                    alt="..." height="20px" ng-show="PayFail">
+                                <strong class="me-auto" ng-show="PayFail">THẤT BẠI!</strong>
+                                <small>3 giây trước</small>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">
+                                <div ng-show="PaySuccess">Bạn đã thanh toán thành công!</div>
+                                <div ng-show="PayFail">Thanh toán thất bại, vui lòng kiểm tra lại thông tin!</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- notification -->
+                </div>
+
+                <div class="border-end d-none d-lg-block" style="width: 1px;"></div>
+
+                <div class="col-12 col-lg-7 ps-4 mt-5 mt-lg-0">
+                    <h3 class="text-center">HÓA ĐƠN</h3>
+                    <div class="d-lg-flex flex-lg-row justify-content-between text-center">
+                        <h6>MÃ ĐƠN HÀNG: <span id="OrderID"></span></h6>
+                        <h6><span>{{currentTime | date:'dd-MM-yyyy hh:mm'}}</span></h6>
+                    </div>
+
+                    <hr>
+                    <!-- Products  -->
+                    <div class="flex flex-column" ng-repeat="p in carts">
+                        <div class="card mb-3 border border-0">
+                            <div class="card-body">
+                                <div class="d-lg-flex justify-content-lg-between text-center">
+                                    <div class="d-flex flex-row align-items-center col-12 col-lg-6">
+                                        <div ng-repeat="img in p.img | limitTo:1">
+                                            <img src="assets/images/fixed/{{p.img}}" class="rounded-3" alt="Shopping item"
+                                                style="width: 60px;">
+                                        </div>
+                                        <div class="ms-3">
+                                            <h5>{{p.name}}</h5>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-row align-items-center mt-3 mt-lg-0">
+                                        <div style="width: 50px;" class="me-5">
+                                            <input class="border border-2 rounded text-center" type="number"
+                                                ng-model="p.quantity" ng-change="changeQuantity(this)" min="1"
+                                                style="width: 50px; font-size: 1.25rem;">
+                                        </div>
+                                        <div style="width: 174px;">
+                                            <h5 class="mb-0">
+                                                {{FormatNumber(p.price * p.quantity)}} VNĐ
+                                            </h5>
+                                        </div>
+                                        <a href="#!" ng-click="removeProductInCart(this)" style="color: #cecece;"><i
+                                                class="fas fa-trash-alt"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <!-- Products  -->
+
+                    <div class="card border border-0">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <p class="mb-2">Tổng tiền ({{totalProduct}} sản
+                                    phẩm)</p>
+                                <p class="mb-2">{{FormatNumber(totalPrice)}} VNĐ</p>
+                            </div>
+
+                            <div class="d-flex justify-content-between">
+                                <p class="mb-2">Phí vận chuyển ({{(province == 'HCM' ? 'Nội thành' : 'Ngoại thành')}})
+                                </p>
+                                <p class="mb-2">{{(province == 'HCM' ? FormatNumber(40000) : FormatNumber(80000))}} VNĐ
+                                </p>
+                            </div>
+
+                            <hr>
+
+                            <div class="d-flex justify-content-between mb-4">
+                                <h5 class="mb-2">Thành tiền</h5>
+                                <h5 class="mb-2">{{FormatNumber(totalPrice + (province == 'HCM' ? 40000 : 80000))}} VNĐ
+                                </h5>
+                            </div>
+
+                            <div class="text-center d-lg-none d-block">
+                                <button type="submit" class="btn button-custom" data-bs-toggle="modal" data-bs-target="#exampleModal">Thanh toán</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <!-- Main  -->
+    
+
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+    
+          <div class=" text-center pt-4">
+            <span class=" fw-bold fs-1 text-white ms-2 ">PVK</span>
+            <p class="text-light p-4">PVK “LỰA CHỌN HOÀN HẢO”</p>
+    
+    
+          </div>
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+    
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+    
+            <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+    
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+    
+            <!-- Linkedin -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+    
+            <!-- Github -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+    
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2022 Copyright:
+          <a class="text-white " href="https://mdbootstrap.com/">PVK.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+
+    <!-- Angular js  -->
+    <script src="/assets/js/ngapp.js" type="text/javascript"></script>
+    <script src="/assets/js/cart.js" type="text/javascript"></script>
+    <script src="/assets/js/OpenDetailsProduct.js" type="text/javascript"></script>
+    <script src="/assets/js/Products.js" type="text/javascript"></script>
+    <script src="/assets/js/checkout.js"></script>
+
+   
+</body>
+
+</html>

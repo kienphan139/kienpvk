@@ -1,0 +1,102 @@
+.carousel{
+    margin-top: 100px;
+}
+
+.header{
+    background-color: black;
+}
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+
+.clmain{
+    background-color: #ddd;
+}
+.main1{
+    padding-top: 150px;
+    background-color: #ddd;
+}
+.btn
+{
+    border-radius: 30px;
+    background-color: #CF0A0A;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+:hover .btp{
+    color: #333;
+   
+}
+
+body {
+
+    background-color: rgb(251, 255, 255);
+-webkit-box-align: center;
+      align-items: center;
+-webkit-box-pack: center;
+      justify-content: center;
+
+}
+nav{
+background-color: rgb(58, 58, 53);
+
+}
+#carouselExampleIndicators{
+    padding-top: 100px;
+}
+
+
+.main{
+   padding-top: 120px;
+}
+label input {
+-webkit-transition: width 1s ease, opacity 0.5s ease 0.5s;
+transition: width 1s ease, opacity 0.5s ease 0.5s;
+opacity: 1;
+width: 180px;
+height: 25px;
+border: 0;
+outline: none;
+color: #b06d0f;
+}
+label i {
+position: absolute;
+top: 11px;
+right: 11px;
+color: #333;
+cursor: pointer;
+}
+label[data-state="close"] {
+border-radius: 30px;
+padding: 5px 5px;
+-webkit-transition: all 1s ease;
+transition: all 1s ease;
+}
+label[data-state="close"]::after {
+width: 0%;
+-webkit-transition: all 0.3s ease;
+transition: all 0.3s ease;
+}
+label[data-state="close"] i {
+pointer-events: none;
+}
+label[data-state="close"] input {
+width: 28px;
+height: 25px;
+opacity: 0;
+cursor: pointer;
+-webkit-transition: opacity 0.5s ease, width 1s ease;
+transition: opacity 0.5s ease, width 1s ease;
+
+}
+
+/*
+.hvitem:hover{
+transform: translateY(-2px);
+box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.05);
+
+}
+.hvitem{
+padding-bottom: 10px;
+padding-top: 10px;
+}*/

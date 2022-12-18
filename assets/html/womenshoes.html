@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en" ng-app="myapp" ng-controller="products">
+
+<head>
+    <title>PVK womenshoes</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    <link rel="stylesheet" href="/assets/css/index.css">
+ 
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/script.js">
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/offcanvas-navbar/">
+    <link rel="icon" href="assets/images/DC_Comics_logo.png" type="image/x-icon" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- Angular js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"
+        integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.8.3/angular-messages.min.js"
+        integrity="sha512-a+xgEyXVK7r+KKIDYyHtFfLi9LItmFDff6Z4/5lrGmL03u1vtFCjQXQz3dSIwOapB3YIRMBO1+IQj6ptnxAh/A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+
+</head>
+
+<body ng-controller="cart">
+
+    <header>
+        <nav class="navbar navbar-expand-lg  py-4 fixed-top ">
+          <div class="container">
+            <!-- logo -->
+            <a href="#" class="navbar-brand d-flex justify-content-between align-items-center ">
+              <span class=" fw-bold fs-1 text-white ms-2">PVK</span>
+            </a>
+            <!-- end logo -->
+    
+            <button class="navbar-toggler boder-0 text-white " type="button" data-bs-toggle="collapse"
+              data-bs-target="#navMenu">
+              <span class="navbar-toggler-icon bg-white "></span>
+            </button>
+    
+            <div class="collapse navbar-collapse " id="navMenu">
+              <ul class="navbar-nav mx-auto text-center">
+                <li class="nav-item px-2  py-2">
+                  <a class="nav-link active text-light  fs-5" aria-current="page" href="/index.html">Home</a>
+                </li>
+                <li class="nav-item px-2  py-2 ">
+                  <a class="nav-link text-light fs-5 " href="/assets/html/manshoes.html">Giày Thể Thao Nam</a>
+                </li>
+                <li class="nav-item px-2  py-2">
+                  <a class="nav-link text-light fs-5" href="/assets/html/womenshoes.html">Giày Thể Thao Nữ</a>
+                </li>
+                <li class="nav-item px-2  py-2">
+                  <a class="nav-link text-light fs-5" href="/assets/html/Sandalnam.html">Sandal</a>
+                </li>
+                <li class="nav-item px-2  py-2 boder-0 ">
+                  <a class="nav-link text-light fs-5" href="/assets/html/Balo.html">Balo </a>
+                </li>
+                <li class="nav-item px-2  py-2 boder-0 ">
+                  <form id="app" action="#">
+                    <label :data-state="state" for="search">
+                      <input type="text" placeholder="Search" @click="state = 'opan'" @blur="state='close'" />
+                      <i class="fa fa-search" @click="" aria-hidden="true"></i>
+                    </label>
+                  </form><a style="font-size: 8pt; text-decoration: none" target="_blank"
+                    href="http://frontendfreecode.com"></a>
+                </li>
+              </ul>
+            </div>
+            <script>var app = new Vue({
+                el: '#app',
+                data: { state: "close" }
+              });</script>
+          </div>
+        </nav>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://www.mwc.com.vn/Resources/Slider/2022/10/27/banner-website-1-.png" class="d-block w-100"
+                  alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://www.mwc.com.vn/Resources/Slider/2022/01/18/img-6629.JPG" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://www.mwc.com.vn/Resources/Slider/2022/02/18/cover-website.jpg" class="d-block w-100"
+                  alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+      </header>
+     
+ <!-- modalll -->
+ <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+ aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+ <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" >
+   <div class="modal-content" >
+     <div class="modal-header" >
+       <h1 class="modal-title fs-5" id="staticBackdropLabel">THÔNG TIN SẢN PHẨM</h1>
+       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+     </div>
+     <div class="modal-body " >
+       <div class="row" style="width: 100%;">
+         <div class=" col-4">
+            <img src="/assets/images/fixed/{{ph.img}}" class="card-img-top" style="width: 100%; " alt="...">
+         </div>
+
+        <div class="col-8 ">
+            <ul class="list-group list-group-flush  ">
+                <li class="list-group-item">Sản Phẩm: <a class="float-end text-decoration-none">{{ph.name}}</a></li>
+                <li class="list-group-item">Giá cũ: <a class="float-end text-decoration-none">{{ph.oldPrice}}</a> </li>
+                <li class="list-group-item">Giá: <a class="float-end text-decoration-none">{{ph.price}}</a> </li>
+                <li class="list-group-item ">Thông tin: <a class="float-end text-danger text-decoration-none ">{{ph.info}}</a> </li>
+                
+                </li>
+     
+              </ul>
+
+        </div>
+       </div>
+     </div>
+     <div class="modal-footer" ng-controller="openDetailsProduct" >
+       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      
+       
+     </div>
+   </div>
+ </div>
+</div>
+
+<!-- modalll  -->
+
+    <!-- modal -->
+    <div class="modal fade" id="Cart" tabindex="-1" aria-labelledby="CartLabel" aria-hidden="true"
+        data-bs-backdrop="static" data-bs-keyboard="false" ng-controller="openDetailsProduct">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="CartLabel"></h1>
+                    <button type="button" class=" text-black fw-bold fs-2 bg-transparent" data-bs-dismiss="modal"
+                        aria-label="Close"><i class="fa-solid fa-arrow-right-from-bracket "></i></button>
+
+
+                </div>
+                <div class="modal-body">
+                    <section class="h-100 h-custom bg-transparent" style="background-color: #eee;">
+                        <div class="container py-5 h-100 ">
+                            <div class="row d-flex justify-content-center align-items-center h-100 ">
+                                <div class="col">
+                                    <div class="card bg-transparent">
+                                        <div class="card-body p-4 ">
+                                            <div class="row ">
+                                                <div class="col-lg-7">
+                                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                                        <div>
+                                                            <p class="mb-0">Giỏ hàng của bạn đã có  {{totalProduct}}
+                                                                sản phẩm</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card mb-3" ng-repeat="p in carts">
+                                                        <div class="card-body">
+                                                            <div class="d-flex">
+                                                                <div class="d-flex flex-row align-items-center col-6">
+                                                                    <div>
+                                                                        <img src="/assets/images/fixed/{{p.img}}"
+                                                                            ng-repeat="img in p.img | limitTo:1"
+                                                                            class="rounded-3" alt="Shopping item"
+                                                                            style="width: 60px;">
+                                                                    </div>
+                                                                    <div class="ms-3">
+                                                                        <h5>{{p.name}}
+                                                                        </h5>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex flex-row align-items-center">
+                                                                    <div style="width: 50px;" class="m-3">
+                                                                        <input
+                                                                            class="border border-0 text-center form-control"
+                                                                            type="number" ng-model="p.quantity"
+                                                                            ng-change="changeQuantity(this)"
+                                                                            style="width: 60px; font-size: 1.25rem; padding: 0 !important;">
+                                                                    </div>
+                                                                    <div style="width: 175px;" class="ms-2">
+                                                                        <h5 class="mb-0">
+                                                                            {{FormatNumber(p.price
+                                                                            * p.quantity)}}
+                                                                        VNĐ
+                                                                        </h5>
+                                                                    </div>
+                                                                    <a href="#" ng-click="removeProductInCart(this)"
+                                                                        style="color: #cecece;"><i
+                                                                            class="fas fa-trash-alt"></i></a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                                <div class="col-lg-5 ">
+                                                    <div class="card bg-transparent  bag-img text-white rounded-3">
+                                                        <div class="card-body">
+                                                            <div
+                                                                class="d-flex align-items-center mb-4 justify-content-center">
+                                                                <h5 class="mb-0">THÔNG TIN GIỎ HÀNG
+                                                                </h5>
+                                                            </div>
+
+                                                            <hr class="my-4">
+
+                                                            <div class="d-flex justify-content-between">
+                                                                <p class="mb-2">TỔNG GIÁ
+                                                                    ({{totalProduct}} sản phẩm)</p>
+                                                                <p class="mb-2">
+                                                                    {{FormatNumber(totalPrice)}}
+                                                                    VNĐ
+                                                                </p>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="d-flex justify-content-between mb-4">
+                                                                <p class="mb-2">TỔNG</p>
+                                                                <p class="mb-2">
+                                                                    {{FormatNumber(totalPrice)}}
+                                                                    VNĐ
+                                                                </p>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-flex align-content-center justify-content-center">
+                                                                <button type="button"
+                                                                    class="btn btn-info btn-block btn-lg">
+                                                                    <a href="/checkout.html"
+                                                                        style="text-decoration: none; color: black; font-weight: bold;">
+                                                                        <div>
+                                                                            <span> CHECK OUT <i
+                                                                                    class="fas fa-long-arrow-alt-right ms-2"></i></span>
+                                                                        </div>
+                                                                    </a>
+                                                                </button>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal -->
+
+    <!-- sản phẩm -->
+    <div class="row m-0 mt-5 ">
+
+        <div class=" left-menu " ng-controller="openDetailsProduct">
+            <div class=" mt-5  container">
+                <div class="row clearfix">
+                    <div class="col-lg-3 col-md-4 col-6 " ng-repeat="p in Products | filter:filterSearch">
+                        <div class="card product_item bg-transparent">
+                            <div class="body ">
+                                <div class="cp_img ">
+                                   <a href="" data-bs-toggle="modal"
+                                   data-bs-target="#staticBackdrop" ng-click="showdetails(p)"> <img src="/assets/images/fixed/{{p.img}}" alt="Product" class="img-fluid "></a>
+                                    <div class="hover">
+                                       
+                                        <a href="" class="btn btn-primary btn-sm waves-effect"
+                                            ng-click="addToCart(this)"><i class="zmdi zmdi-shopping-cart"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product_details">
+                                    <h5><a href="" class="text-dark text-decoration-none fs-5">{{p.name}}</a></h5>
+                                    <ul class="product_price list-unstyled">
+                                        <li class="old_price text-warning fs-5"><s>{{FormatNumber(p.oldPrice)}}đ</s></li>
+                                        <li class="new_price fs-5">{{FormatNumber(p.price)}}đ</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- sản phẩm -->
+    
+    </button>
+
+    <!-- gio hang -->
+
+    <button type="button" class="btn btn-primary rounded-5 btn-floating btn-lg btn-cart-float border-0"
+        style="background-color: #D10024; color: #FFFFFF;" data-bs-toggle="modal" id="" data-bs-target="#Cart"><i
+            class="fa-solid fa-bag-shopping"></i></button>
+    <!-- gio hang -->
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+    
+          <div class=" text-center pt-4">
+            <span class=" fw-bold fs-1 text-white ms-2 ">PVK</span>
+            <p class="text-light p-4">PVK “LỰA CHỌN HOÀN HẢO”</p>
+    
+    
+          </div>
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+    
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+    
+            <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+    
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+    
+            <!-- Linkedin -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+    
+            <!-- Github -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+    
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2020 Copyright:
+          <a class="text-white " href="https://mdbootstrap.com/">PVK.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+    <!-- notification -->
+    <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1050">
+        <div id="liveToast" class="toast bg-dark text-light" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i class="fa-solid fa-check-double"></i> &nbsp; &nbsp; &nbsp;
+                <strong class="me-auto">SẢN PHẨM ĐÃ ĐƯỢC THÊM VÀO GIỎ HÀNG!<S/strong>
+                
+            </div>
+            
+        </div>
+    </div>
+    <!-- notification -->
+    
+
+   
+
+
+
+
+    <script src="/assets/js/ngapp.js" type="text/javascript"></script>
+    <script src="/assets/js/cart.js" type="text/javascript"></script>
+    <script src="/assets/js/OpenDetailsProduct.js" type="text/javascript"></script>
+    <script src="/assets/js/Products.js" type="text/javascript"></script>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: { state: "close" }
+        });
+    </script>
+
+
+    <!-- return top -->
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            // When the user scrolls down 20px from the top of the document, show the button
+            scrollFunction();
+
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos <= document.getElementById("header-container").offsetHeight) {
+                document.getElementById("header-container").style.position = "relative";
+            } else if (prevScrollpos > document.getElementById("header-container").offsetHeight) {
+                document.getElementById("header-container").style.position = "fixed";
+                if (prevScrollpos > currentScrollPos) {
+                    document.getElementById("header-container").style.top = "0";
+                } else {
+                    document.getElementById("header-container").style.top = "-" + document.getElementById("header-container").offsetHeight + "px";
+                }
+            }
+            prevScrollpos = currentScrollPos;
+        }
+
+        //Get the button
+        let mybutton = document.getElementById("btn-back-to-top");
+
+        function scrollFunction() {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.addEventListener("click", backToTop);
+
+        function backToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- animation  -->
+    <!-- <script>
+        ScrollReveal({
+
+            duration: 1000,
+            delay: 400,
+            reset: true,
+        });
+
+        ScrollReveal().reveal('.img-avatar', { delay: 200, origin: 'left', distance: '300px', });
+        ScrollReveal().reveal('.title', { delay: 200, origin: 'left', distance: '300px', });
+        ScrollReveal().reveal('.all-info', { delay: 200, origin: 'left', distance: '300px', });
+        ScrollReveal().reveal('.product_item', { delay: 200, origin: 'bottom', distance: '300px', });
+        ScrollReveal().reveal('.grd-bar', { delay: 200, origin: 'left', distance: '300px', });
+        ScrollReveal().reveal('.info-box', { delay: 200, origin: 'left', distance: '300px', });
+
+
+    </script> -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+    <script>
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
+    </script>
+</body>
+
+</html>
